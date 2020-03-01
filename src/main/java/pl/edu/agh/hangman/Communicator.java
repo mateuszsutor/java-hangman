@@ -17,6 +17,7 @@ public class Communicator {
 //        for (String s: texts) {
 //            print(s);
 //        }
+//        }
 //    }
 
     public String getText() {
