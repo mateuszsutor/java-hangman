@@ -10,11 +10,16 @@ public class Controller {
 
     public void run() {
 
-        game.setSearchedWord() = library.getRandomWord();
-        comms.print("Welcome to HangMan! Try to type letters and guess the whole word.");
+        comms.print("Welcome to HangMan! Please choose the word generation method");
+
+        library.readFile();
+        game.setSearchedWord(library.getRandomWord());
 
         while (game.getTriesLeft() > 0) {
             game.playRound(comms.getText("Your letter?"));
+            comms.print(graphics.getAnimation(game.getTriesLeft()));
+            comms.print(graphics.getWord(game.getGuessed()));
+
 
 
         }
