@@ -10,10 +10,19 @@ public class Controller {
 
     public void run() {
 
-        comms.print("Welcome to HangMan! Please choose the word generation method");
+        int functionIndex = 0
+        comms.print("Welcome to HangMan! Please choose the word generation method\n" +
+                    "1 - Automatic\n");
 
-        library.readFile();
-        game.setSearchedWord(library.getRandomWord());
+        functionIndex = comms.getNumber();
+
+        switch (functionIndex) {
+            case 1:
+                library.readFile();
+                game.setSearchedWord(library.getRandomWord());
+                break;
+        }
+
 
         while (game.getTriesLeft() > 0) {
             game.playRound(comms.getText("Your letter?"));
