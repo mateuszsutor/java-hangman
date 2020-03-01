@@ -9,6 +9,13 @@ public class Game {
         return triesLeft;
     }
 
+    public void setSearchedWord() {
+
+    }
+
+    public void playRound() {
+
+    }
 
 
 
