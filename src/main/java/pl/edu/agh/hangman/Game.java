@@ -25,14 +25,19 @@ public class Game {
 
         String tempGuessed = new String();
         char givenC = text.charAt(0);
+        boolean isMistake = false;
         for (int i = 0; i < searchedWord.length(); i++){
             char c = searchedWord.charAt(i);
             if (c == givenC) {
                 tempGuessed = tempGuessed + givenC;
             } else {
                 tempGuessed = tempGuessed + "_";
-                triesLeft = triesLeft - 1;
+                isMistake = true;
             }
+        }
+
+        if (isMistake == true) {
+            triesLeft = triesLeft - 1;
         }
         notGuessed = tempGuessed;
     }
