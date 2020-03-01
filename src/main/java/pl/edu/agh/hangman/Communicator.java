@@ -27,4 +27,8 @@ public class Communicator {
         print(question);
         return scanner.next();
     }
+
+    public int getNumber() {
+        return scanner.nextInt();
+    }
 }

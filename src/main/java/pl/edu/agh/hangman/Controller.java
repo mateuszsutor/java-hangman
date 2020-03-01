@@ -23,14 +23,10 @@ public class Controller {
                 break;
         }
 
-
         while (game.getTriesLeft() > 0) {
             game.playRound(comms.getText("Your letter?"));
             comms.print(graphics.getAnimation(game.getTriesLeft()));
             comms.print(graphics.getWord(game.getGuessed()));
-
-
-
         }
 
     }
