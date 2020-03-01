@@ -4,6 +4,7 @@ package pl.edu.agh.hangman;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Library{
@@ -15,10 +16,17 @@ public class Library{
             Scanner scanner = new Scanner(poemFile);
 
             while (scanner.hasNext()) {
-                words.add(scanner.next());
+                words.add(scanner.next().toLowerCase());
             }
             scanner.close();
         }
+
+
+    public String getRandomWord() {
+        Random rand = new Random();
+        String randomWord = words.get(rand.nextInt(words.size()));
+        return randomWord;
+    }
 
 }
 
