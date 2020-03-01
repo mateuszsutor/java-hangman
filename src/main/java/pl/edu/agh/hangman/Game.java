@@ -18,8 +18,6 @@ public class Game {
     }
 
 
-
-
-
-
+    public Object getGuessed() {
+    }
 }
