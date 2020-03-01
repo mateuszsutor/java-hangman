@@ -2,7 +2,7 @@ package pl.edu.agh.hangman;
 
 public class Graphics {
 
-    public static final String[] HANGMANPICS = new String[]{
+    private final String[] HANGMANPICS = new String[]{
             "  +---+\n" +
                     "  |   |\n" +
                     "      |\n" +
@@ -55,8 +55,8 @@ public class Graphics {
     };
 
     public String getAnimation(int triesLeft) {
+        int tries = 8 - triesLeft;
+        return  HANGMANPICS[tries];
     }
 
-    public String getWord(Object guessed) {
-    }
 }
