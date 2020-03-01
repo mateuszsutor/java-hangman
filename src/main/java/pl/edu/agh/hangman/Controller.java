@@ -24,9 +24,9 @@ public class Controller {
         }
 
         while (game.getTriesLeft() > 0) {
-            game.playRound(comms.getText("Your letter?"));
+            game.playRound(comms.getText("Your letter?").toLowerCase());
             comms.print(graphics.getAnimation(game.getTriesLeft()));
-            comms.print(graphics.getWord(game.getGuessed()));
+            comms.print(game.getNotGuessed());
         }
 
     }
