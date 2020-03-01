@@ -23,8 +23,8 @@ public class Game {
 
     public void playRound(String text) {
 
-        String tempGuessed();
-        char givenC = text.charAt(0)
+        String tempGuessed = new String();
+        char givenC = text.charAt(0);
         for (int i = 0; i < searchedWord.length(); i++){
             char c = searchedWord.charAt(i);
             if (c == givenC) {

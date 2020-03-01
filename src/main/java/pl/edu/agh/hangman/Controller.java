@@ -1,5 +1,7 @@
 package pl.edu.agh.hangman;
 
+import java.io.File;
+
 public class Controller {
 
     private Library library = new Library();
@@ -8,9 +10,9 @@ public class Controller {
     private Graphics graphics = new Graphics();
 
 
-    public void run() {
+    public void run() throws Exception {
 
-        int functionIndex = 0
+        int functionIndex = 0;
         comms.print("Welcome to HangMan! Please choose the word generation method\n" +
                     "1 - Automatic\n");
 
@@ -18,7 +20,10 @@ public class Controller {
 
         switch (functionIndex) {
             case 1:
-                library.readFile();
+                File file = new File(
+                        Library.class.getClassLoader().getResource("slowa.txt").getFile()
+                );
+                library.readFile(file);
                 game.setSearchedWord(library.getRandomWord());
                 break;
         }

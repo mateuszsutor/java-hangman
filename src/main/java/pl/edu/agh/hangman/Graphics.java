@@ -55,7 +55,7 @@ public class Graphics {
     };
 
     public String getAnimation(int triesLeft) {
-        int tries = 8 - triesLeft;
+        int tries = 7 - triesLeft;
         return  HANGMANPICS[tries];
     }
 
